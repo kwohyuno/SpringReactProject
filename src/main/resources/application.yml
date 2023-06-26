@@ -1,8 +1,20 @@
+#port설정
 server:
   port: 9002
 
-
-
-
-
-
+#mysql setting
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://db-h04lf-kr.vpc-pub-cdb.ntruss.com:3306/studydb?serverTimezone=Asia/Seoul
+    username: study
+    password: bit!@#123
+  servlet:
+    multipart:
+      max-file-size:
+        20MB
+#mybatis
+mybatis:
+  type-aliases-package: data.dto
+  mapper-locations:
+    - /mapper/**/*.xml
